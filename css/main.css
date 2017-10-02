@@ -1,0 +1,291 @@
+body{
+    overflow-y: scroll;
+    height: 101vh;
+    background-color: #fafafa;
+}
+
+header{
+    width: 100%;
+    height: 110px;
+    background-color: white;
+    border-bottom: 1px solid #95989A;  
+}
+.logo{
+    background-image: url(..//img/js.png);
+    width: 130px;
+    height: 100px;
+    background-size: cover;
+    float: left;
+}
+.logo:after{
+    position: absolute;
+    width: 1px;
+    height: 50px;
+    background-color: black;
+    content: " ";
+    margin-left: 120px;
+    margin-top: 25px;
+}
+.header-title{
+    margin-left: 40px;
+    margin-top: 34px;
+    font-size: 22px;
+    float: left;
+}
+.log-in{
+    float: right;
+}
+.log-in a{
+    color: black;
+    float: right;
+    font-size: 22px;
+    margin-top: 30px;
+}
+.log-in a:hover,active{
+    text-decoration: none;
+    color: black;
+}
+.log-in i{
+    font-size: 30px;
+}
+
+.search{
+    padding-top: 15px;
+}
+#search-button{
+    border-radius: 18px;
+
+}
+#search-area,#search-button{
+    width: 100%;
+    border: 1px solid black;
+    height: 36px;
+    outline: none;  
+    background-color: inherit;
+}
+#search-area[placeholder]{
+    padding-left: 30px;
+    font-size: 17px;
+}
+#search-button[placeholder]{
+    text-align: center;
+    font-size: 17px;
+}
+.hit{
+    margin-top: 10px;
+    margin-left: 30px;
+    font-size: 17px;
+    font-weight: bold;
+}
+.content{
+    background-color: #fafafa;
+}
+.image{
+    float: left;
+    width: 24%;
+    margin-top: 20px;
+    height: 200px;
+    margin-left: .75rem;    
+    background-size: cover;
+
+  }
+
+.login-pop-up{
+    width: 100%;
+	min-height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	overflow: hidden;
+	position: fixed;
+	top: 0px;
+    z-index: 10;
+    display: none;
+}
+.login-pop-up .login-pop-up-content{
+    margin: 40px auto 0px auto;
+	width: 450px;
+	height: 250px;
+	padding: 10px;
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px #000;
+	text-align: center;
+}
+.login-pop-up .login-pop-up-content p{
+    float: left;
+    margin-left: 45px;
+    margin-top: 40px;
+}
+.login-pop-up .login-pop-up-content span{
+    text-transform: uppercase;
+		font-weight: bolder;
+		font-size: 22px;
+}
+.login-pop-up .login-pop-up-content input{
+    width: 340px;
+    margin-top: 20px;
+}
+.login-pop-up .login-pop-up-content button{
+    margin-top: 30px;
+    float: right;
+    margin-right: 45px;
+    background-color: green;
+    height: 40px;
+    border: none;
+    color: white;
+}
+.sign-up-pop-up{
+    width: 100%;
+	min-height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	overflow: hidden;
+	position: fixed;
+	top: 0px;
+    z-index: 10;
+    display: none;
+}
+.sign-up-pop-up .sign-up-pop-up-content{
+    margin: 40px auto 0px auto;
+	width: 450px;
+	height: 350px;
+	padding: 10px;
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px #000;
+	text-align: center;
+}
+.sign-up-pop-up .sign-up-pop-up-content p{
+    float: left;
+    margin-left: 45px;
+    margin-top: 40px;
+}
+.sign-up-pop-up .sign-up-pop-up-content span{
+    text-transform: uppercase;
+		font-weight: bolder;
+		font-size: 22px;
+}
+.sign-up-pop-up .sign-up-pop-up-content input{
+    width: 340px;
+    margin-top: 20px;
+}
+.sign-up-pop-up .sign-up-pop-up-content button{
+    margin-top: 30px;
+    float: right;
+    margin-right: 45px;
+    background-color: green;
+    height: 40px;
+    border: none;
+    color: white;
+}
+
+.add-images{
+    float: left;
+    width: 24%;
+    margin-top: 20px;
+    height: 200px;
+    margin-left: .75rem;    
+    background-size: cover;
+    border: 1px solid grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.add-images:hover{
+    border: 1px solid black;
+}
+.add-images i:hover{
+    color: black;
+}
+.add-images i{
+    font-size: 120px;
+    color: grey;
+}
+.add-picture-pop-up{
+    width: 100%;
+	min-height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	overflow: hidden;
+	position: fixed;
+	top: 0px;
+    z-index: 10;
+    display: none;
+}
+.add-picture-pop-up .add-picture-content{
+    margin: 40px auto 0px auto;
+	width: 650px;
+	height:500px;
+	padding: 10px;
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px #000;
+    text-align: center;
+    display: flex;
+}
+.add-picture-pop-up .add-picture-content span {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 17px;
+    margin-top: 5px;
+    float: left;
+}
+.add-picture-pop-up .add-picture-content p {
+    
+  
+    margin-top: 30px;
+   margin-left: -40px;
+}
+
+.add-picture-pop-up .add-picture-content input{
+    width: 130%;
+    float: left;
+    margin-left: 10px;
+}
+.add-picture-pop-up .add-picture-content .dragNdrop{
+    height: 370px;
+    width: 320px;
+    border: 1px solid grey;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-bottom: none;
+}
+#AddTags{
+    min-height: 80px;
+}
+#AddDescr{
+    min-height: 80px;
+}
+#Select-image{
+    width: 320px;
+    height: 50px;
+    margin-left: 10px;
+    border-top: none;
+    border: 1px solid grey;
+}
+
+
+#autocomplete-results {
+    display: none;
+    border: 1px solid grey;
+   
+}
+#autocomplete-results li{
+    width: 104%;
+    background-color: #fff;
+    border-top: none;
+    height: 26px;
+    list-style: none;
+    list-style-position: left;
+
+    margin-left: -35px;
+}
+#autocomplete-results li:hover{
+    background-color: lightgrey;
+}
+
+
+@media (max-width: 620px) {
+    .header-title{
+        display: none;
+    }
+  }
