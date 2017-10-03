@@ -18,8 +18,9 @@
                         Welcome to Image Previewer!
                     </div>
                     <div class="log-in">
-                       <a href="javascript:login()">
-                           Log in
+                       <a id="login-button" href="javascript:login()">
+                           <span id="logIn">Log in</span>
+                          
                             <i class="fa fa-sign-in" aria-hidden="true"></i>
 						</a>
                     </div>
@@ -60,7 +61,7 @@
                 <div id="main">
                     <a href="javascript:AddPictureShow()">
                             <div class="add-images">
-                                    <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+                                    <i class="fa fa-plus-square-o" id='logOut' aria-hidden="true"></i>
                             </div>
                     </a>
                 </div>
@@ -70,8 +71,8 @@
     <div class="login-pop-up" id="login-pop-up">
 		<div class="login-pop-up-content">
 			<span>Log in</span><br>
-			<input required id="username-input" type="email" placeholder="Email"><br>
-			<input required id="password-input" type="password" placeholder="Password"><br>
+			<input required id="email-onput-login" type="email" placeholder="Email"><br>
+			<input required id="password-input-login" type="password" placeholder="Password"><br>
 			<p>New user?  <a href="javascript:SignUpPopUpShow()">Sign up here</a></p>
 			<a href="javascript:LoginPopUpHide()"><button id="login-button">Sign me up</button></a>
 		</div>
@@ -79,35 +80,48 @@
 	<div class="sign-up-pop-up" id="sign-up-pop-up">
 		<div class="sign-up-pop-up-content">
 			<span>Sign up</span><br>
-			<input required type="text" placeholder="Username">
-			<input required type="email" placeholder="Email"><br>
-			<input required type="password" placeholder="Password"><br>
-			<input required type="password" placeholder="Retype password">
-			<a href="javascript:SignUpPopUpHide()"><button>Sign me up</button></a>
+			<input required type="text" id="username-input" placeholder="Username">
+			<input required type="email" id="email-input" placeholder="Email"><br>
+			<input required type="password" id="password-input" placeholder="Password"><br>
+			<input required type="password" id="retype-input" placeholder="Retype password">
+			<a href="javascript:SignUpPopUpHide()"><button id="register-button">Sign me up</button></a>
 		</div>
     </div>
     <div class="add-picture-pop-up" id="add-picture-pop-up">
-            <div class="add-picture-content">
-                <div class="left-side">
-                        <span>Add image</span><br>
-                        <div class="dragNdrop"></div>
-                        <button id="Select-image"></button>
-                </div>
-               <div class="right-side">
-                    <span>Add info</span>
-                    <br>
-                    <p></p>
-                    <p>Name your media</p>
-                    <input type="text" id="AddNameMedia"><br>
-                    <p>Add tags</p>
-                    <input type="text" id="AddTags"><br>
-                    <p>Add description</p>
-                    <input type="text" id="AddDescr"><br>
-               </div>
+        <div class="add-picture-content">
+            <div class="left-side">
+                    <span>Add image</span><br>
+                    <div class="dragNdrop">
+                        <img src="img/dragNdrop.png" alt="">
+                        <span>Drag in your media</span><br>
+                        <p>
+                            Find media in your hard drive, thin drag them <br>
+                            in to autocatically upload.
+                        </p>
+                    </div>
+                    <button id="Select-image">
+                        Manually select media +
+                    </button>
             </div>
+           <div class="right-side">
+                <span>Add info</span>
+                <br>
+                <p></p>
+                <p>Name your media</p>
+                <input type="text" id="AddNameMedia"><br>
+                <p>Add tags</p>
+                <div class="AddTags"></div><br>
+                <div class="inputTags">
+                    <input id="inputAddTags" type="text" placeholder="Write a tag.."><button id="buttonAddTags">Add tag</button>    
+                </div><br>
+                <p  id="last-p"> Add description</p>
+                <input type="text" id="AddDescr"><br>
+                <button id="Publish">Publish</button>
+           </div>
         </div>
+    </div>
     <script>
-        document.cookie = "efim=1324";
+        
     </script>
     <script src="js/index.js"></script>
     <script
@@ -119,6 +133,7 @@
     integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
     crossorigin="anonymous"></script>
     <script src="js/popUPs.js"></script>
+    <script src="js/register.js"></script>
     <script src="js/login.js"></script>
     <script src="https://use.fontawesome.com/7dba235eff.js"></script>
 </body>
