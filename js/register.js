@@ -21,25 +21,29 @@
         console.log(localStorage.getItem('singnedIn'));
 
     function localData(){
-       
-            localStorage.setItem('username', username.value);
-            localStorage.setItem('email',email.value);
-            localStorage.setItem('password', password.value);
-        
-            if(password.value === retypePassword.value){
-                localStorage.setItem('retypePassword', retypePassword.value);
-            //Конец регистрации, автоматическая авторизация
-                
-                singnedIn = true;
+            if((username.value != "")&&(email.value !="")&&(password.value != "")){
+                localStorage.setItem('username', username.value);
+                localStorage.setItem('email',email.value);
+                localStorage.setItem('password', password.value);
 
-                localStorage.setItem('singnedIn', JSON.stringify(singnedIn));
-
-                $("#sign-up-pop-up").hide();
-
-                location.reload()
-
-                
+                if(password.value === retypePassword.value){
+                    localStorage.setItem('retypePassword', retypePassword.value);
+                //Конец регистрации, автоматическая авторизация
+                    
+                    singnedIn = true;
+    
+                    localStorage.setItem('singnedIn', JSON.stringify(singnedIn));
+    
+                    $("#sign-up-pop-up").hide();
+    
+                    location.reload()
+    
+                    
+                }
             }
+            else{alert('Заполните все поля!');}
+        
+           
         
            
 
