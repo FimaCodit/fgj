@@ -71,19 +71,39 @@
     <div class="login-pop-up" id="login-pop-up">
 		<div class="login-pop-up-content">
 			<span>Log in</span><br>
-			<input required id="email-onput-login" type="email" placeholder="Email"><br>
+			<input required id="email-input-login" type="email" placeholder="Email"><br>
 			<input required id="password-input-login" type="password" placeholder="Password"><br>
 			<p>New user?  <a href="javascript:SignUpPopUpShow()">Sign up here</a></p>
-			<a href="javascript:LoginPopUpHide()"><button id="login-button">Sign me up</button></a>
+			<a href=""><button id="authorization-button">Sign me up</button></a>
 		</div>
 	</div>
 	<div class="sign-up-pop-up" id="sign-up-pop-up">
 		<div class="sign-up-pop-up-content">
-			<span>Sign up</span><br>
-			<input required type="text" id="username-input" placeholder="Username">
-			<input required type="email" id="email-input" placeholder="Email"><br>
-			<input required type="password" id="password-input" placeholder="Password"><br>
-			<input required type="password" id="retype-input" placeholder="Retype password">
+            <span>Sign up</span><br>
+            <form action="#" class="register-form">
+                <div>
+                    <input required type="text" name="username-input" id="username-input" placeholder=" ">
+                    <label for="username-input">Username</label>
+                </div>
+                <div class="div">
+                    <input required type="email" name="email-input" id="email-input" placeholder=" " >
+                    <label for="email-input">Email</label>
+                   
+                </div>
+                <div class="div">
+                    <input required type="password" name="password-input" id="password-input" placeholder=" "
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" >
+                    <label for="password-input">Password</label>
+                    
+                </div>
+                <div class="div">
+                    <input required type="password" name="retype-input" id="retype-input" placeholder=" "
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}">
+                    <label for="retype-input">Retype password</label>
+                </div>
+            </form>
+            
+		
 			<a href="javascript:SignUpPopUpHide()"><button id="register-button">Sign me up</button></a>
 		</div>
     </div>

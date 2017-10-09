@@ -1,8 +1,4 @@
 
-function LoginPopUpHide(){
-	$("#login-pop-up").hide();
-	
-}
 function AddImagesDiplay(){
 	$('.add-images').show();
 }

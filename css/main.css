@@ -133,6 +133,7 @@ header{
     border: none;
     color: white;
 }
+
 .sign-up-pop-up{
     width: 100%;
 	min-height: 100%;
@@ -175,6 +176,36 @@ header{
     height: 40px;
     border: none;
     color: white;
+}
+.register-form label{
+    opacity: 0.3;
+    font-weight: bold;
+    position: absolute;
+   margin-top: 24px;
+   margin-left: -330px;
+}
+.register-form input:focus{
+    outline: 0;
+    
+}
+.register-form input:focus+label{
+    opacity: 0;
+    
+}
+.register-form input:valid{
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/check.svg);
+    background-size: 20px;
+    background-repeat: no-repeat;
+   background-position: right;
+}
+.register-form input:valid + label{
+    opacity: 0;
+}
+.register-form input:invalid:not(:focus):not(:placeholder-shown){
+    background-color: pink;
+}
+.register-form input:invalid:not(:focus):not(:placeholder-shown) + label{
+    opacity: 0;
 }
 
 .add-images{
