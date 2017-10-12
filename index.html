@@ -13,7 +13,7 @@
         <div class="container">
             <div class="row">
                <div class="col-md-12">
-                <div class="logo"></div>
+                <a href="index.html"><div class="logo"></div></a>
                     <div class="header-title">
                         Welcome to   Image Previewer!
                     </div>
@@ -46,11 +46,13 @@
                     <div class="col-md-6">
                         <div class="hit">
                                 e.g. 
-                                <a href="javascript:tagExComp()" name="computer">computer</a>,
-                                <a href="">man</a>,
-                                <a href="">nature</a>,
-                                <a href="">city</a>,
-                                <a href="">car</a>
+                                <ul id="hit-wrapper">
+                                    <li class="hit_tags">computer</li>
+                                    <li class="hit_tags">man</li>
+                                    <li class="hit_tags">nature</li>
+                                    <li class="hit_tags">city</li>
+                                    <li class="hit_tags">car</li>
+                                </ul>
                         </div>
                     </div>
                 </div>
@@ -111,17 +113,17 @@
         <div class="add-picture-content">
             <div class="left-side">
                     <span>Add image</span><br>
-                    <div class="dragNdrop">
-                        <img src="img/dragNdrop.png" alt="">
-                        <span>Drag in your media</span><br>
+                    <div class="dragNdrop" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <i class="fa fa-dropbox" aria-hidden="true"></i>
+                        
+                        <span >Drag in your media</span><br>
                         <p>
                             Find media in your hard drive, thin drag them <br>
                             in to autocatically upload.
                         </p>
                     </div>
-                    <button id="Select-image">
-                        Manually select media +
-                    </button>
+                    <label id="addFile" for="file"><img src="//placehold.it/200x40&amp;text=upload" alt="">Select image + </label>
+                    <input  name="file" id="file" type="file">
             </div>
            <div class="right-side">
                 <span>Add info</span>
